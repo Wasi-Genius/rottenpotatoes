@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # Defines RESTful routes for Movies (index, show, new, create, edit, update, destroy)
+  resources :movies
+
+  # Redirects the root path (http://localhost:3000/) to /movies
+  root to: redirect('/movies')
 end
